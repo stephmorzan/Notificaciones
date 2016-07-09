@@ -28,22 +28,7 @@ public class MainActivity extends ActionBarActivity {
         ed3=(EditText)findViewById(R.id.editText3);
         Button b1=(Button)findViewById(R.id.button);
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tittle=ed1.getText().toString().trim();
-                String subject=ed2.getText().toString().trim();
-                String body=ed3.getText().toString().trim();
 
-                NotificationManager notif=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-                Notification notify=new Notification(R.drawable.common_full_open_on_phone,tittle,System.currentTimeMillis());
-                PendingIntent pending= PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
-
-                //notify.setLatestEventInfo(getApplicationContext(),subject,body,pending);
-                notif.notify(0, notify);
-
-            }
-        });
     }
 
 
